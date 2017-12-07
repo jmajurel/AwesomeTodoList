@@ -1,0 +1,42 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color : ;
+}
+
+.container {
+  padding: 5px;
+  width: 100%;
+  border: solid black 2px;
+}
+
+#app {
+  margin: auto;
+  margin-top: 10%;
+  width: 30%;
+}
+
+#header {
+  background-color: steelblue;
+  text-transform: uppercase;
+  color: white;
+}
+
+#todos {
+  color: gray;
+  height: 50px;
+}
+
+#todo.do:nth-of-type(2n) {
+  background-color: lightgray;
+}
+
+h1 {
+  margin: 0;
+}
+
+input {
+  border: none;
+  font-size: 20px;
+  background-color: lightgray;
+}
+
