@@ -1,21 +1,27 @@
-console.log("connected!");
-
 var todos = [];
 var toDoList = $("#todolist");
-var toDo = $("input");
+var plus = $(".fa-plus"); 
+var input = $("input");
 
-$(".fa-plus").click(function(){
-  console.log("click");
-  var newToDo = toDo.text();
-  if(newToDo != "") {
-    //add new toDo
-    todos.push(newToDo);
-    //update toDoList
-    updateToDoList(newToDo);
+input.keypress(function(ev) {
+  if(ev.which === 13) {
+    var newToDo = $(this).val(); 
+    if(newToDo !== "") {
+      //add new toDo
+      todos.push(newToDo);
+      //update toDoList
+      updateToDoList(newToDo);
+    }
+    //reset the text
+    $(this).val("");
   }
 });
 
+plus.click( function() {
+  input.slideToggle("slow");  
+});
+
 function updateToDoList(newToDo) {
-  toDoList.append("<li>" + newToDo + "<li>");
+  toDoList.append("<li>" + newToDo + "</li>");
 };
 

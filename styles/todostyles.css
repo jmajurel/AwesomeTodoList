@@ -26,7 +26,11 @@ body {
   height: 50px;
 }
 
-#todo.do:nth-of-type(2n) {
+#todolist {
+  margin: 0;
+}
+
+#todolist li:nth-of-type(2n) {
   background-color: lightgray;
 }
 
@@ -39,4 +43,3 @@ input {
   font-size: 20px;
   background-color: lightgray;
 }
-
