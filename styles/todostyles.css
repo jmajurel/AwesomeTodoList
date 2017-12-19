@@ -1,12 +1,12 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color : ;
+  background: linear-gradient(to right, cyan, white);
 }
 
 .container {
   padding: 5px;
   width: 100%;
-  border: solid black 2px;
+  /*border: solid black 2px;*/
 }
 
 #app {
@@ -28,12 +28,17 @@ body {
 
 #todolist {
   margin: 0;
+  list-style: none;
+  background: white;
 }
 
 #todolist li:nth-of-type(2n) {
   background-color: lightgray;
 }
 
+li {
+  width: 100%;
+}
 h1 {
   margin: 0;
 }
@@ -42,4 +47,15 @@ input {
   border: none;
   font-size: 20px;
   background-color: lightgray;
+}
+.done {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.fa-trash-o {
+  display: none;
+  color: white;
+  background: red;
+  min-height: 2%;
 }
