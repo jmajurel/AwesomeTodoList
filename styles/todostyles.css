@@ -4,9 +4,7 @@ body {
 }
 
 .container {
-  margin: 0;
   padding: 5px;
-  width: 100%;
 }
 
 #app {
@@ -22,6 +20,8 @@ body {
 }
 
 #todolist {
+  margin: 0;
+  width: 100%;
   list-style: none;
   background-color: white;
 }
@@ -30,8 +30,8 @@ body {
   background-color: lightgray;
 }
 
-li {
-  height: 25px;
+.do {
+  height: 30px;
   vertical-align: middle;
 }
 
@@ -40,6 +40,8 @@ h1 {
 }
 
 input {
+  margin: 0;
+  width: 100%;
   border: none;
   font-size: 20px;
   background-color: lightgray;
@@ -50,12 +52,15 @@ input {
   text-decoration: line-through;
 }
 
-.fa-trash-o {
+button {
   display: none;
   color: white;
   background-color: red;
   height: 100%;
+  padding: 10px;
   margin: 0;
+  float: left;
+  border: none;
 }
 
 .fa-plus {
