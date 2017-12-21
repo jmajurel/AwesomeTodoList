@@ -2,7 +2,6 @@ var todos = [];
 var toDoList = $("#todolist");
 var plus = $(".fa-plus"); 
 var input = $("input");
-var binIcon = '<i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>';
 
 input.keypress(function(ev) {
   if(ev.which === 13) {
@@ -23,15 +22,16 @@ plus.click(function() {
 });
 
 function updateToDoList(newToDo) {
-  toDoList.append( "<li>" + binIcon + " " + newToDo + "</li>");
+  var binIcon = '<i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>';
+  toDoList.append(binIcon + newToDo);
 };
 
-$("#todolist").on("click", "li", function(){
+$("#todolist").on("click", "div", function(){
   $(this).toggleClass("done");
 });
 
-$("#todolist").on("mouseenter mouseleave", "li", 
+$("#todolist").on("mouseenter mouseleave", "div", 
   function() {
-    $(this).children("i").fadeToggle("medium", "linear");
+    $(this).children("i").fadeToggle("slow", "linear");
   }, 
 );
