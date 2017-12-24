@@ -4,7 +4,11 @@ body {
 }
 
 .container {
-  padding: 5px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px 10px;
+  border: 0;
+  width: 100%;
 }
 
 #app {
@@ -19,14 +23,25 @@ body {
   color: white;
 }
 
-#todolist {
+h1 {
   margin: 0;
-  width: 100%;
+}
+
+.fa-plus {
+  float: right;
+}
+
+input {
+  font-size: 20px;
+  background-color: lightgray;
+}
+
+#todolist {
   list-style: none;
   background-color: white;
 }
 
-#todolist li:nth-of-type(2n) {
+#todolist .do:nth-of-type(2n) {
   background-color: lightgray;
 }
 
@@ -35,16 +50,8 @@ body {
   vertical-align: middle;
 }
 
-h1 {
-  margin: 0;
-}
-
-input {
-  margin: 0;
-  width: 100%;
-  border: none;
-  font-size: 20px;
-  background-color: lightgray;
+.do span{
+  padding-left: 10px;
 }
 
 .done {
@@ -61,8 +68,4 @@ button {
   margin: 0;
   float: left;
   border: none;
-}
-
-.fa-plus {
-  float: right;
 }

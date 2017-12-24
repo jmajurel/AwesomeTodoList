@@ -26,18 +26,17 @@ function updateToDoList(newToDo) {
   toDoList.append('<div class="do">' + binIcon + "<span>" + newToDo + "</span>" + "</div>");
 };
 
-$("#todolist").on("click", "div", function(){
+$("#todolist").on("click", ".do span", function(){
   $(this).toggleClass("done");
 });
 
-$("#todolist").on("mouseenter mouseleave", "div span", 
+$("#todolist").on("mouseenter mouseleave", ".do", 
   function() {
     $(this).children("button").fadeToggle("slow", "linear");
   }, 
 );
-$("button").on("click", function(){
+
+$("#todolist").on("click",".do button", function(){
   console.log("clicked");
-  //remove task from list
-  //todos.remove($(this).parent().text());
   $(this).parent().remove();
 });
